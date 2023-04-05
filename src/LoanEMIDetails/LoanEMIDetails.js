@@ -69,26 +69,7 @@ export class LoanEMIDetails extends LocalizeMixin(LitElement) {
       <div>
         <div class="emi-details">
           <h2>EMI Details</h2>
-          <p>
-            ${localize.msg('change-language:intRate')} :
-            <span>${this._data.interestRate} %</span>
-          </p>
-          <p>
-            ${localize.msg('change-language:mnthlyEmi')} :
-            <span>${this._data.monthlyEMI}</span>
-          </p>
-          <p>
-            ${localize.msg('change-language:pricipal')} :
-            <span>${this._data.principal}</span>
-          </p>
-          <p>
-            ${localize.msg('change-language:interest')} :
-            <span>${this._data.interest}</span>
-          </p>
-          <p>
-            ${localize.msg('change-language:TotalAmt')} :
-            <span>${this._data.totalAmount}</span>
-          </p>
+         
         </div>
         <div class="btn-cont">
           <lion-button class="cancel-btn btn" @click=${this._toBasicDetails}
