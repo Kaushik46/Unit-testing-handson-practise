@@ -5,14 +5,14 @@ import '../src/Customer/Customer-details.js';
 
 describe('customer details', () => {
   // Write test cases inside this block
-
-  it('Checking covert language functionality ', async function () {
+  
+  it('Should check covert language functionality ', async  () => {
     const el = await fixture(html`<customer-details></customer-details> `);
     const myvalue = el.shadowRoot.querySelector('h2').textContent;
     expect(myvalue).to.equal("Customer Details");
   })
 
-  it('Spying on function EMI details ', async function () {
+  it('Should call the function _toEmidetails once and call count should be one ', async  () => {
     const el = await fixture(html`<customer-details></customer-details> `);
     const myspy = spy(el, '_toEmidetails');
     el._toEmidetails();

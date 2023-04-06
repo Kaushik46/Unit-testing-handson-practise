@@ -4,14 +4,13 @@ import '../src/SuccessAndError/Success.js';
 import '../src/SuccessAndError/Error.js';
 
 describe('Success screen ', () => {
-  // Write test cases inside this block
 
-  it('Checking loan success screen heading ', async function () {
+  it('Should check loan success screen heading ', async  () => {
     const el = await fixture(html`<loan-success></loan-success> `);
     const myvalue = await el.shadowRoot.querySelector('h2').textContent;
     expect(myvalue).to.equal("!!!");
   })
-  it('Spying on function routing to home', async function () {
+  it('Should call the function _toHome once and call count should be one', async  () => {
     const el = await fixture(html`<loan-success></loan-success>  `)
     const myspy = spy(el, '_toHome');
     el._toHome();
@@ -22,14 +21,13 @@ describe('Success screen ', () => {
 });
 
 describe('error screen', () => {
-  // Write test cases inside this block
 
-  it('Checking loan error screen heading', async function () {
+  it('Should check loan error screen heading', async  () => {
     const el = await fixture(html`<loan-error></loan-error> `);
     const myvalue = await el.shadowRoot.querySelector('h2').textContent;
     expect(myvalue).to.equal("!!");
   })
-  it('Spying on function routing to home ', async function () {
+  it('Should call the function _toHome once and call count should be one ', async  () => {
     const el = await fixture(html`<loan-error></loan-error>   `)
     const myspy = spy(el, '_toHome');
     el._toHome();
